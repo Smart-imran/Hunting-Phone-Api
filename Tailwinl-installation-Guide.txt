@@ -1,0 +1,32 @@
+
+
+----------------------------
+
+//package jason:
+
+"build": "tailwindcss -i ./src/input.css -o ./src/output.css --watch"
+----------------------------------------------------------------------
+
+1. npm init -y
+
+2.npm install -D tailwindcss
+-----------------------------------
+
+3.npx tailwindcss init
+------------------------------
+
+//tailwind--Config--
+
+4. content: ["./*.{html,js}"],
+
+--------------------------------
+
+5. @tailwind base;
+   @tailwind components;
+   @tailwind utilities;
+----------------------------
+
+6.npx tailwindcss -i ./src/input.css -o ./src/output.css --watch
+
+finish
+
