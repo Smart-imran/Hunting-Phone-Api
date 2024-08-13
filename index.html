@@ -7,18 +7,34 @@
     <title>Document</title>
     <link rel="stylesheet" href="./src/output.css">
 
-    
+
 </head>
 
 <body>
 
     <header>
-        <h2 class="text-6xl">
+        <h2 class="text-5xl text-center mb-6">
             Hunting Phone
         </h2>
     </header>
 
     <main>
+
+        <!-- search Result -->
+         <section class="mb-4 text-center bg-gray-100 p-4 m-4" >
+            <input id="search-field" type="text" placeholder="Search..." class="input input-bordered input-primary w-full max-w-xs" />
+
+            <button onclick="searchHanndle()" class="btn btn-active btn-success text-white text-lg">Search</button>
+         </section>
+        
+
+
+
+        <section>
+
+            <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
+
+        </section>
 
     </main>
 
@@ -26,7 +42,7 @@
 
     </footer>
 
-
+    <script src="./js/phone.js"></script>
 </body>
 
 </html>
