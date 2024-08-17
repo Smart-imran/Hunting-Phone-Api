@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./src/output.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
 
 
 </head>
@@ -18,32 +20,45 @@
         </h2>
     </header>
 
-    <main>
+    <main>         
 
-        <!-- search Result -->
-        <section class="mb-4 text-center bg-gray-100 p-4 m-4">
-            <input id="search-field" type="text" placeholder="Search..."
-                class="input input-bordered input-primary w-full max-w-xs" />
+        <section class="mb-4 bg-gray-100 p-4 m-4 grid grid-cols-2  items-center  text-center">
+            <!-- Left Side: First Text Field and Button -->
+            <div class="flex items-center justify-start gap-2">
+                <input id="search-field" type="text" placeholder="Search..."
+                    class="input input-bordered input-primary w-full max-w-xs" />
+                <button onclick="searchHandle()" class="btn btn-active  btn-success text-white text-md ml-2">Search</button>
+            </div>
+        
+            <!-- Right Side: Second Text Field and Button -->
+           <!--  <div class="flex items-center justify-end gap-2">
+                <input id="search-field2" type="text" placeholder="Search..."
+                    class="input input-bordered input-primary w-full max-w-xs" />
+                <button onclick="searchHandle2()" class="btn btn-active btn-success text-white text-md ml-2">Search</button>
+            </div>
+ -->
+           
+        </section>        
+        
+       <section>
 
-            <button onclick="searchHandle()" class="btn btn-active btn-success text-white text-lg">Search</button>
+        <!-- spinner -->
 
-                <!-- another Search Field  -->
-            <input id="search-field2" type="text" placeholder="Search..."
-                class="input input-bordered input-primary w-full max-w-xs" />
+        <div id="loading-spiner" class="text-center my-60 hidden ">
+            <span class="loading loading-spinner loading-lg text-error"></span>
+        </div>
 
-            <button onclick="searchHandle2()" class="btn btn-active btn-success text-white text-lg">Search</button>
+            <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2"> </div><br>
+            
+             <!-- Show all button -->
 
+             <div id="show-all-container" class="hidden text-center my-8">
+                <button onclick="handleShowAll()" class="btn btn-active btn-error text-white ">Show All</button>
+            </div>
 
         </section>
 
 
-
-
-        <section>
-
-            <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
-
-        </section>
 
     </main>
 
