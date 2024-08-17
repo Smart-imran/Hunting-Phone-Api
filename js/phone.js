@@ -42,7 +42,7 @@ const displayPhones = (phones, isShowAll) => {
 
 
     phones.forEach(phone => {
-        //console.log(phone);
+         console.log(phone);
 
         //step-2. create a div
 
@@ -59,8 +59,8 @@ const displayPhones = (phones, isShowAll) => {
         <div class="card-body">
           <h2 class="card-title">${phone.phone_name}</h2>
           <p>${phone.slug}</p>
-        <div class="card-actions justify-end">
-          <button class="btn btn-primary">Buy Now</button>
+        <div class="card-actions justify-center">
+          <button onclick="handleSearchDetails('${phone.slug}')"  class="btn btn-primary">Show Details</button>
         </div>
         </div>
         </div>
@@ -99,14 +99,20 @@ const searchHandle = (isShowAll) => {
 } */
 
 
+
+
+    /* Handle search Details */
+
+    const handleSearchDetails = (detailId) =>{
+        console.log("heloo world",detailId);
+    }
+
 const toggleLoadingSpiner = (isLoading) => {
     const loaddingspiner = document.getElementById("loading-spiner");
-
 
     if (isLoading) {
         loaddingspiner.classList.remove("hidden");
     }
-
     else {
         loaddingspiner.classList.add("hidden");
     }
